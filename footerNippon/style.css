@@ -1,0 +1,120 @@
+h3, a{
+    color: white;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+h2{
+    color: white;
+    font-size: 25px;
+    margin: 0;
+}
+
+p{
+    color: white;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#overskrift_footer{
+    font-weight: bolder;
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "nyhedsbrev kasser virker om service"; 
+
+      padding: 40px 20px 20px 20px;
+      background-color: #5E5E5E;
+      text-align: center;
+  }
+  .nyhedsbrev { grid-area: nyhedsbrev; }
+  .kasser { grid-area: kasser; }
+  .virker { grid-area: virker; }
+  .om { grid-area: om; }
+  .service { grid-area: service; }
+
+/*Nyhedsbrev*/
+  
+  input[type=text], input[type=submit] {
+    width: 70%;
+    padding: 12px;
+    margin: 30px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  
+  input[type=submit] {
+    background-color: #D56560;
+    color: white;
+    border: none;
+    width: 20%;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+
+  #trust_ikon {
+    width: 50px;
+    height: auto;
+    margin-top: 20%;
+    margin-right: 100%;
+  }
+
+  #ikon_insta {
+    width: 55px;
+    height: auto;
+  }
+
+  #ikon_face {
+    width: 60px;
+    height: auto;
+  }
+
+#sted {
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 70px repeat(5); 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "nyhedsbrev"
+          "kasser"
+          "virker"
+          "om"
+          "service"; 
+      }
+      .nyhedsbrev { grid-area: nyhedsbrev; }
+      .kasser { grid-area: kasser; }
+      .virker { 
+        grid-area: virker;
+        max-height: 70px;
+        padding: 2rem 0; 
+    }
+      .om { grid-area: om; }
+      .service { grid-area: service; 
+        padding: 2rem 0;
+    }
+
+      #trust_ikon {
+        margin: 0;
+      }
+     
+}
+
+
+
